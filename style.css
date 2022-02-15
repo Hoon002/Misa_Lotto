@@ -15,6 +15,11 @@ svg {
     margin-left: auto;
 }
 
+text {
+    font-family: "Jua", "sans-serif";
+    font-size: 50px;
+}
+
 .circles {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -26,12 +31,30 @@ svg {
     border-top: 10px double rgb(0, 0, 0);
 }
 
-input {
+#start {
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding-top: 30px;
     padding-bottom: 30px;
+    padding-left: 80px;
+    padding-right: 80px;
+    font-family: "Jua", sans-serif;
+    list-style: none;
+    background-color: rgb(250, 242, 208);
+    border-radius: 16px;
+    font-size: 35px;
+    box-shadow: 3px 3px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+#reload {
+    display: block;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    padding-bottom: 15px;
     padding-left: 80px;
     padding-right: 80px;
     font-family: "Jua", sans-serif;

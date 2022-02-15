@@ -9,35 +9,78 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="animation.js"></script>
 </head>
 <body>
     <h1>시경연 로또</h1>
 
+    <script>
+        var ides = ['#1st_num', '#2nd_num', '#3rd_num', '#4th_num', '#5th_num'];
+        var speeds = [6000, 8000, 10000, 12000, 14000];
+        var lucky_nums = lotto_result();
+
+        var i = 0;
+        function roll_balls() {
+            while (i < 5) {
+                rapid_change.number_scaling(ides[i], speeds[i], lucky_nums[i]);
+                i += 1;
+            }
+        }
+    </script>
+
     <div class="circles">
     <svg width="200" height="200">
         <!--svg의 width와 height는 도화지 전체의 크기를 말함 그리고 아래의 원의 중심 기준으로 cx, cy는 도화지에서의 좌표(위치)를 말함-->
-        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="4" fill="red" />
+        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="red" id= "1st_ball"/>
+        <text x="50%" y="57%" text-anchor="middle" id="1st_num">
+            <script>
+                document.write(0);
+            </script>
+        </text>
     </svg>
-    <svg width="200" height="200">
-       
-        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="4" fill="orange" />
+
+    <svg width="200" height="200" id="2nd_ball">
+        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="orange" />
+        <text x = "50%" y = "57%" text-anchor = "middle" id="2nd_num">
+            <script>
+                document.write(0);
+            </script>
+        </text>
     </svg>
-    <svg width="200" height="200">
-        
-        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="4" fill="yellow" />
+
+    <svg width="200" height="200" id="3rd_ball">
+        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="yellow" />
+        <text x = "50%" y = "57%" text-anchor = "middle" id="3rd_num">
+            <script>
+                document.write(0);
+            </script>
+        </text>
     </svg>
-    <svg width="200" height="200">
-       
-        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="4" fill="green" />
+
+    <svg width="200" height="200" id="4th_ball">
+        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="green" />
+        <text x = "50%" y = "57%" text-anchor = "middle" id="4th_num">
+            <script>
+                document.write(0);
+            </script>
+        </text>
     </svg>
-    <svg width="200" height="200">
-       
-        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="4" fill="blue" />
+
+    <svg width="200" height="200" id="5th_ball">
+        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="rgb(0, 132, 255)" />
+        <text x = "50%" y = "57%" text-anchor = "middle" id="5th_num">
+            <script>
+                document.write(0);
+            </script>
+        </text>
     </svg>
+
     </div>
 
     <div class="button">
-        <input type="button" value="시작!">
+        <input id = "start" type="button" value="시작" onclick="roll_balls()">
+        <input id = "reload" type="button" value="리셋" onclick="location.reload()">
     </div>
 </body>
 </html>
