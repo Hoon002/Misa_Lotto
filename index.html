@@ -18,7 +18,7 @@
     <script>
         var ides = ['#1st_num', '#2nd_num', '#3rd_num', '#4th_num', '#5th_num'];
         var balls = ['#1st_ball', '#2nd_ball', '#3rd_ball', '#4th_ball', '#5th_ball'];
-        var speeds = [4000, 6000, 8000, 9000, 13000];
+        var speeds = [2000, 3000, 4000, 4500, 7000];
         var lucky_nums = lotto_result();
 
         var i = 0;
@@ -33,7 +33,7 @@
     <div class="circles">
     <svg width="200" height="200">
         <!--svg의 width와 height는 도화지 전체의 크기를 말함 그리고 아래의 원의 중심 기준으로 cx, cy는 도화지에서의 좌표(위치)를 말함-->
-        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="red" id= "1st_ball"/>
+        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="rgb(243, 132, 132)" id= "1st_ball"/>
         <text x="50%" y="57%" text-anchor="middle" id="1st_num" stroke = "white">
             <script>
                 document.write(0);
@@ -42,7 +42,7 @@
     </svg>
 
     <svg width="200" height="200" id="2nd_ball">
-        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="orange" id="2nd_ball"/>
+        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="rgb(255, 201, 107)" id="2nd_ball"/>
         <text x = "50%" y = "57%" text-anchor = "middle" id="2nd_num" stroke = "white">
             <script>
                 document.write(0);
@@ -51,7 +51,7 @@
     </svg>
 
     <svg width="200" height="200" id="3rd_ball">
-        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="yellow" id="3rd_ball"/>
+        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="rgb(255, 253, 166)" id="3rd_ball"/>
         <text x = "50%" y = "57%" text-anchor = "middle" id="3rd_num" stroke = "white">
             <script>
                 document.write(0);
@@ -60,7 +60,7 @@
     </svg>
 
     <svg width="200" height="200" id="4th_ball">
-        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="green" id="4th_ball"/>
+        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="rgb(152, 255, 174)" id="4th_ball"/>
         <text x = "50%" y = "57%" text-anchor = "middle" id="4th_num" stroke = "white">
             <script>
                 document.write(0);
@@ -69,7 +69,7 @@
     </svg>
 
     <svg width="200" height="200" id="5th_ball">
-        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="rgb(0, 132, 255)" id="5th_ball"/>
+        <circle cx="100" cy="100" r="75" stroke="black" stroke-width="6" fill="rgb(152, 173, 255)" id="5th_ball"/>
         <text x = "50%" y = "57%" text-anchor = "middle" id="5th_num" stroke = "white">
             <script>
                 document.write(0);
